@@ -36,8 +36,15 @@
     </div>
   </div>
 
-  
+
   <script>
+    const panels = document.querySelectorAll('.panel') // grabs all the panel elements // 
+
+    function toggleOpen() {
+      this.classList.toggle('open')
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen))
 
   </script>
 

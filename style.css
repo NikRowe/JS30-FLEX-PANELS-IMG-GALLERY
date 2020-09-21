@@ -76,5 +76,6 @@ html {
   }
 
   .panel.open {
+    flex: 5; /*when .open class is on the element, it will take up 5x the room as the other flex children */
     font-size: 40px;
   }

@@ -1,0 +1,24 @@
+{
+  "name": "js30-flex-panel-gallery",
+  "version": "1.0.0",
+  "description": "Wes Bos JS30 05 Flex Panel Gallery",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikRowe/JS30-FLEX-PANELS-IMG-GALLERY.git"
+  },
+  "author": "Nik Rowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikRowe/JS30-FLEX-PANELS-IMG-GALLERY/issues"
+  },
+  "homepage": "https://github.com/NikRowe/JS30-FLEX-PANELS-IMG-GALLERY#readme",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

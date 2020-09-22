@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Flex Panels 💪</title>
   <link rel='stylesheet' href='style.css'>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 
   <div class="panels">
@@ -22,6 +24,7 @@
     <div class="panel panel3">
       <p>Your</p>
       <p>Wants</p>
+      <button id="myBtn">Get In Touch</button>
       <p>My Command</p>
     </div>
     <div class="panel panel4">
@@ -36,6 +39,15 @@
     </div>
   </div>
 
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <a href="mailto:nikrowedev@gmail.com?">
+        Hire Me!
+      </a>
+    </div>
+  </div>
+
 
   <script>
     const panels = document.querySelectorAll('.panel') // grabs all the panel elements // 
@@ -44,8 +56,8 @@
       this.classList.toggle('open')
     }
 
-    function toggleActive (e) {
-      if(e.propertyName.includes('flex')) {
+    function toggleActive(e) {
+      if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active')
       }
     }
@@ -53,9 +65,41 @@
     panels.forEach(panel => panel.addEventListener('click', toggleOpen))
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive))
 
+
+    // Get the modal
+    var modal = document.querySelector("#myModal");
+
+    // Get the button that opens the modal
+    var btn = document.querySelector("#myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.querySelector(".close");
+
+    // When the user clicks the button, open the modal 
+    function toggleBtn() {
+      modal.style.display = "block"
+    }
+    btn.addEventListener('click', toggleBtn)
+
+    // When the user clicks on <span> (x), close the modal
+    function closeModal() {
+      modal.style.display = "none"
+    }
+    span.addEventListener('click', closeModal)
+
+    // When the user clicks anywhere outside of the modal, close it
+    function closeOnWindowClick(e) {
+      if (e.target == modal) {
+        modal.style.display = "none"
+      }
+    }
+
+    window.addEventListener('click', closeOnWindowClick)
+
   </script>
 
 
 
 </body>
+
 </html>
